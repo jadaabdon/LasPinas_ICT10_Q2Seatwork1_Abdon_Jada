@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://pyscript.net/releases/2026.7.3/core.css">
+    <script type="module" src="https://pyscript.net/releases/2026.7.3/core.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Rajdhani:wght@400;600&display=swap" rel="stylesheet">
+
+    <title>Quarter 2 Seatwork 1 - Volleyball Varsity</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: 'Rajdhani', sans-serif;
+            background: linear-gradient(135deg, #959ba2b7, #182530, #254067);
+            color: rgb(255, 255, 255);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .volleyball {
+    font-size: 90px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+        h1 {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: clamp(25px, 5vw, 38px);
+            color: #fffffffd;
+            margin-bottom: 12px;
+            text-shadow: 0 0 12px #fefefea3;
+        }
+
+        p {
+            font-size: 20px;
+            color: #9ac4e7;
+        }
+
+        main {
+            width: 100%;
+            max-width: 420px;
+            padding: 30px;
+            background: #122337;
+            border: 1px solid #f4feff55;
+            border-radius: 18px;
+            box-shadow: 0 0 30px #00000066;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 13px 15px;
+            border: 1px solid #426078;
+            border-radius: 8px;
+            background: #091827;
+            color: white;
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 17px;
+            
+        }
+
+        input[type="text"]:focus {
+            border-color: #ffffff;
+            box-shadow: 0 0 10px #ffffff55;
+        }
+
+        input[type="text"]::placeholder {
+            color: #8ca5b9;
+        }
+
+        input[type="button"] {
+            padding: 13px;
+            border: none;
+            border-radius: 8px;
+            background: #255990;
+            color: #ffffff;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 15px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        input[type="button"]:hover {
+            background: white;
+            box-shadow: 0 0 15px #ffffff;
+           
+        }
+
+        #result {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            color: #ffffff;
+        }
+
+    
+    </style>
+</head>
+
+<body>
+
+    <main>
+        <header>
+            <div class="volleyball">🏐</div>
+            <h1>VOLLEYBALL VARSITY</h1>
+            <p>Welcome to the Girls Volleyball Varsity checker! </p>
+        </header>
+
+        <form>
+            <input type="text" id="first_name" placeholder="Enter your first name">
+            <input type="text" id="last_name" placeholder="Enter your last name">
+            <input type="button" py-click="candidate_checker" value="ENTER">
+        </form>
+
+        <div id="result"></div>
+    </main>
+
+    <py-script src="main.py"></py-script>
+
+</body>
+</html>
